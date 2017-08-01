@@ -1,0 +1,27 @@
+.creater {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    img {
+      display: block;
+    }
+  }
+
+  &__dash {
+    margin: 0 5px;
+    color: #927c6d;
+  }
+
+  &__link {
+    color: $color-blue3;
+    text-decoration: none;
+    border-bottom: 1px solid $color-blue3;
+    font-size: 14px;
+    @include transition();
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}

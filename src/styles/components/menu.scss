@@ -1,0 +1,91 @@
+.menu {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    &.active {
+      overflow: visible;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    @include transition();
+
+    &_selected {
+      background: rgba($color-white, 0.1);
+    }
+
+    .active & {
+      color: $color-orange;
+    }
+  }
+
+  &__caret {
+    margin-left: 5px;
+    color: $color-white;
+    @include transition();
+
+    .active & {
+      @include transform(rotate(-180deg));
+      color: $color-orange;
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+.dropdown {
+  width: 280px;
+  background: $color-dark;
+  list-style: none;
+  padding: 30px;
+
+  &_last {
+    right: 0;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: #959595;
+    text-decoration: none;
+    @include transition();
+
+    i {
+      margin-right: 10px;
+      @include transition();
+    }
+
+    &:hover, &:hover i {
+      color: $color-white;
+    }
+  }
+}

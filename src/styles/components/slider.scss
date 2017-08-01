@@ -1,0 +1,28 @@
+.slider {
+
+  &__nav {
+
+    > div {
+      position: absolute;
+      top: 50%;
+      @include transform(translate(0, -50%));
+      cursor: pointer;
+      z-index: 60;
+      font-size: 30px;
+      color: $color-light;
+
+      &.owl-prev {
+        left: -24px;
+      }
+
+      &.owl-next {
+        right: -24px;
+      }
+
+      &.disabled {
+        color: $color-light2;
+        cursor: default;
+      }
+    }
+  }
+}

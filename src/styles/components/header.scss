@@ -1,0 +1,50 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__block {
+    display: flex;
+    align-items: center;
+
+    &_bottom {
+      align-items: stretch;
+    }
+  }
+
+  &__top {
+    padding: 15px 0;
+    background: rgba($color-black, 0.25);
+  }
+
+  &__bottom {
+    background: rgba($color-black, 0.15);
+  }
+
+  &__timetable {
+    color: rgba($color-white, 0.5);
+    font-size: 14px;
+  }
+
+  &__phones {
+    color: $color-light2;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto;
+
+    &_icon {
+      margin-right: 5px;
+      color: $color-blue3;
+    }
+  }
+
+  &__logo {
+    margin: 26px auto 26px 0;
+
+    img {
+      display: block;
+    }
+  }
+}

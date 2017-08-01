@@ -1,0 +1,20 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  &__item {
+    margin-left: 35px;
+    font-size: 14px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-light2;
+    @include transition();
+
+    &:hover, &.active {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.advantages {
+  background: url('../img/bg.png') repeat-x 0 100%;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.advantage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+  padding: 60px 40px 40px;
+  box-shadow: 0px 3px 7px 0px rgba($color-black, 0.15);
+  border-radius: 4px;
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include transition();
+  }
+
+  &:before {
+    background: $color-white;
+    z-index: 0;
+  }
+
+  &:after {
+    background: linear-gradient(to bottom, #246bad, #01c5c7);
+    opacity: 0;
+    z-index: 0;
+  }
+
+  &__icon {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 400;
+    color: $color-dark;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 35px;
+    @include transition();
+  }
+
+  &__text {
+    padding: 0 16px;
+    color: $color-light;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    @include transition();
+  }
+
+  &__more {
+    padding: 20px 30px;
+    border: 1px solid $color-gray;
+    border-radius: 5em;
+    color: $color-gray2;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    background: $color-white;
+    @include transition();
+
+    &:hover {
+      border-color: $color-blue2;
+      background: $color-blue2;
+      box-shadow: inset 0px 3px 7px 0px rgba($color-dark, 0.15);
+      color: $color-white;
+    }
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &:hover &__icon {
+    filter: brightness(0) invert(1);
+  }
+
+  &:hover &__title {
+    color: $color-white;
+  }
+
+  &:hover &__text {
+    color: $color-white;
+  }
+}

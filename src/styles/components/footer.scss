@@ -1,0 +1,113 @@
+.footer {
+
+  &__top {
+    background: $color-footer;
+  }
+
+  &__bottom {
+    padding: 16px;
+    background: $color-footer2;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    margin-right: auto;
+
+    p {
+      color: $color-light;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.025em;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $color-blue3;
+        text-decoration: none;
+        border-bottom: 1px solid $color-blue3;
+        @include transition();
+
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 35px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    &_column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 80px;
+      flex-shrink: 0;
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_title {
+      color: $color-dark;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &_item {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 5px 0;
+    }
+
+    &_link {
+      color: $color-light;
+      text-decoration: none;
+      @include transition();
+
+      &:hover {
+        color: $color-blue3;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $color-light;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.025em;
+  }
+
+  &__creater {
+    margin-left: auto;
+  }
+}

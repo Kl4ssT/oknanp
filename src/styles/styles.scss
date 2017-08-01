@@ -1,0 +1,25 @@
+/*--- FONTS ---*/
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&subset=cyrillic");
+
+/*--- CORE ---*/
+@import "core/variables";
+@import "core/reset";
+@import "core/grid";
+@import "core/mixins";
+
+/*--- PLUGINS ---*/
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
+
+/*--- COMPONENTS ---*/
+@import "components/section";
+@import "components/header";
+@import "components/navigation";
+@import "components/menu";
+@import "components/main";
+@import "components/offer";
+@import "components/slider";
+@import "components/advantages";
+@import "components/contacts";
+@import "components/footer";
+@import "components/creater";
